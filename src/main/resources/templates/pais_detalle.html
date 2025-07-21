@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${pais.nombre} + ' | País Educativo'">Detalle país</title>
+    <link rel="stylesheet" th:href="@{/css/pais_detalle.css}" />
+</head>
+
+<body th:style="'background-image: url(/img/fondos/' + ${pais.nombre.toLowerCase()} + '.jpg);
+                 background-size: contain; background-repeat: no-repeat; background-position: center;
+                 background-color: #e3eff3;'">
+<div class="panel">
+    <h1 th:text="${pais.nombre}">Nombre del país</h1>
+
+    <img class="bandera" th:src="${pais.banderaUrl}" th:alt="'Bandera de ' + ${pais.nombre}" />
+
+    <p th:text="${pais.valorEducativo + ' ' + pais.emojiEducativo}">Valor educativo</p>
+    <p th:text="'Continente: ' + ${pais.continente}">Continente</p>
+</div>
+
+</body>
+</html>

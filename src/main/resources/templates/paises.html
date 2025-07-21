@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Países</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>Paises del Mundo Educativo</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Continente</th>
+        <th>Bandera</th>
+        <th>Valor Educativo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="pais : ${paises}" th:classappend="${pais.cssClass}">
+    <td th:text="${pais.nombre}">Nombre</td>
+        <td th:text="${pais.continente}">Continente</td>
+        <td>
+            <img th:src="${pais.banderaUrl}" alt="Bandera de [[${pais.nombre}]]" />
+        </td>
+        <td>
+            <span th:text="${pais.valorEducativo}">Valor</span>
+            <span th:text="${pais.emojiEducativo}">Emoji</span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

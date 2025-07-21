@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Carga de Países Educativos</title>
+    <link rel="stylesheet" th:href="@{/css/nuevo.css}" />
+</head>
+<body>
+
+<h1>🌍 Cargá tu próximo país educativo</h1>
+
+<form th:action="@{/pais/guardar}" method="post" class="formulario">
+
+    <label>🗺️ Nombre del país:</label>
+    <input type="text" name="nombre" required />
+
+    <label>🏳️ URL de la bandera:</label>
+    <input type="text" name="banderaUrl" required />
+
+    <label>📚 Valor educativo:</label>
+    <input type="text" name="valorEducativo" required />
+
+    <label>🎉 Emoji educativo:</label>
+    <input type="text" name="emojiEducativo" required />
+
+    <label>🌐 Continente:</label>
+    <select name="continente" required>
+        <option>América</option>
+        <option>Europa</option>
+        <option>Asia</option>
+        <option>África</option>
+        <option>Oceanía</option>
+    </select>
+
+    <button type="submit">🚀 Agregar país</button>
+</form>
+
+<p class="inspiracion">✨ Cada país es una historia que enseña con su identidad, ¡creá tu atlas emocional educativo!</p>
+
+</body>
+</html>
+

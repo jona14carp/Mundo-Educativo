@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería Educativa de Países</title>
+    <link rel="stylesheet" th:href="@{/css/galeria.css}" />
+</head>
+<body>
+<h1>Explorá los Países del Mundo Educativo</h1>
+
+<h2 th:if="${continente}" th:text="'Países de ' + ${continente}">Filtrando por continente</h2>
+
+
+<div class="galeria-container">
+    <div class="tarjeta" th:each="pais : ${paises}" th:onclick="'location.href=\'/pais/' + ${pais.id} + '\';'">
+        <img th:src="${pais.banderaUrl}" th:alt="'Bandera de ' + ${pais.nombre}"  alt=""/>
+        <h2 th:text="${pais.nombre}">Nombre</h2>
+        <p th:text="${pais.valorEducativo + ' ' + pais.emojiEducativo}">Valor</p>
+    </div>
+</div>
+<div class="filtros-continente">
+    <a href="/galeria">🌍 Todos</a>
+    <a href="/galeria/continente/América">🌎 América</a>
+    <a href="/galeria/continente/Europa">🌍 Europa</a>
+    <a href="/galeria/continente/Asia">🌏 Asia</a>
+    <a href="/galeria/continente/África">🌍 África</a>
+    <a href="/galeria/continente/Oceanía">🌊 Oceanía</a>
+</div>
+
+</body>
+</html>

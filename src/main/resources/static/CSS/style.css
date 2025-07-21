@@ -1,0 +1,98 @@
+/* Fondo general y tipografía */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f9ff;
+    margin: 30px;
+    color: #333;
+}
+
+/* Título principal */
+h1 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+/* Encabezado de la tabla */
+th {
+    background-color: #003366;
+    color: white;
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Celdas con estilo de tarjeta */
+td {
+    background-color: #e1ecf4;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por una fila */
+tr:hover td {
+    transform: scale(1.02);
+    background-color: #d0e4f5;
+}
+
+/* Imágenes de banderas */
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Espaciado y estilo de textos */
+p {
+    margin: 5px 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+tr {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Colores por continente */
+.america td {
+    background-color: #d1ecf1;
+}
+
+.europa td {
+    background-color: #d6e0f5;
+}
+
+.asia td {
+    background-color: #fbe4e6;
+}
+
+.africa td {
+    background-color: #dff0d8;
+}
+
+.oceania td {
+    background-color: #ffe7d6;
+}
